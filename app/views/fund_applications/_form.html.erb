@@ -1,0 +1,42 @@
+<%= form_for(fund_application) do |f| %>
+  <% if fund_application.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fund_application.errors.count, "error") %> prohibited this fund_application from being saved:</h2>
+
+      <ul>
+      <% fund_application.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :projectedTime %>
+    <%= f.date_select :projectedTime %>
+  </div>
+
+  <div class="field">
+    <%= f.label :initialInvestment %>
+    <%= f.text_field :initialInvestment %>
+  </div>
+
+  <div class="field">
+    <%= f.label :interestRate %>
+    <%= f.text_field :interestRate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :monthlyInvestment %>
+    <%= f.text_field :monthlyInvestment %>
+  </div>
+
+  <div class="field">
+    <%= f.label :isStatic %>
+    <%= f.check_box :isStatic %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

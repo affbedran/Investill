@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fund Applications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Projectedtime</th>
+      <th>Initialinvestment</th>
+      <th>Interestrate</th>
+      <th>Monthlyinvestment</th>
+      <th>Isstatic</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fund_applications.each do |fund_application| %>
+      <tr>
+        <td><%= fund_application.projectedTime %></td>
+        <td><%= fund_application.initialInvestment %></td>
+        <td><%= fund_application.interestRate %></td>
+        <td><%= fund_application.monthlyInvestment %></td>
+        <td><%= fund_application.isStatic %></td>
+        <td><%= link_to 'Show', fund_application %></td>
+        <td><%= link_to 'Edit', edit_fund_application_path(fund_application) %></td>
+        <td><%= link_to 'Destroy', fund_application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fund Application', new_fund_application_path %>

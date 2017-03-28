@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  projectedTime: 2017-03-27
+  initialInvestment: 1.5
+  interestRate: 1.5
+  monthlyInvestment: 1.5
+  isStatic: false
+
+two:
+  projectedTime: 2017-03-27
+  initialInvestment: 1.5
+  interestRate: 1.5
+  monthlyInvestment: 1.5
+  isStatic: false

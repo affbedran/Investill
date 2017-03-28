@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Projectedtime:</strong>
+  <%= @fund_application.projectedTime %>
+</p>
+
+<p>
+  <strong>Initialinvestment:</strong>
+  <%= @fund_application.initialInvestment %>
+</p>
+
+<p>
+  <strong>Interestrate:</strong>
+  <%= @fund_application.interestRate %>
+</p>
+
+<p>
+  <strong>Monthlyinvestment:</strong>
+  <%= @fund_application.monthlyInvestment %>
+</p>
+
+<p>
+  <strong>Isstatic:</strong>
+  <%= @fund_application.isStatic %>
+</p>
+
+<%= link_to 'Edit', edit_fund_application_path(@fund_application) %> |
+<%= link_to 'Back', fund_applications_path %>
